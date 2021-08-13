@@ -10,6 +10,18 @@
 		<link rel="stylesheet" href="static/css/main.css">
 		<!--[if lte IE 9]><link rel="stylesheet" href="static/css/ie9.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="static/css/noscript.css"></noscript>
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+		<style>
+ #aplayer {
+      z-index: 90;
+      position: fixed;
+      bottom: 0;
+    }
+	.aplayer * {
+    color: black;
+}
+  </style>
 	</head>
 	<body>
 
@@ -50,6 +62,47 @@
 
 		<!-- BG -->
 			<div id="bg"></div>
+		<div id="aplayer" class="aplayer"></div>
+<script>const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+	theme: '#FADFA3',
+    audio: [{
+        name: '【IV KLORE】禁忌の寓話',
+        artist: '未知',
+        url: 'static/media/1.mp3',
+        cover: 'cover.jpg'
+    },
+      {
+            name: '【SuperNova】Rise~1',
+            artist: '未知',
+            url: 'static/media/2.mp3',
+            theme: '#46718b'
+        },
+        {
+            name: '【風紙七鳴】KING-Kanaria',
+            artist: '未知',
+            url: 'static/media/3.mp3',
+            theme: '#46718b'
+        },
+        {
+            name: 'Best of my Love',
+            artist: '未知',
+            url: 'static/media/4.mp3',
+            theme: '#46718b'
+        },
+        {
+            name: 'Sayonara I Love You - CLIFF EDGE ',
+            artist: '未知',
+            url: 'static/media/5.mp3',
+            theme: '#46718b'
+        },
+        {
+            name: 'イロドリミドリ 箱部なるcvMAO 猫祭り',
+            artist: '未知',
+            url: 'static/media/6.mp3',
+            theme: '#46718b'
+        }]
+});</script>
 
 		<!-- Scripts -->
 			<script src="static/js/jquery.min.js"></script>
